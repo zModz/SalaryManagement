@@ -14,34 +14,28 @@
 
     <form action="submit" id="calcutalor" onsubmit="return false;">
         <div class="boxes">
+            <p>Salario base: </p><input id="base" type="text" class="textbox" onchange="calcBruto()" required>
+        </div>
+        <div class="boxes">
+            <p>Subsidio Almoço: </p><input id="almo" type="text" class="textbox" onchange="calcBruto()" required>
+        </div>
+        <div class="boxes">
+            <p>Nº Dias: </p><input id="days" type="text" class="textbox" onchange="calcBruto()" required>
+        </div>
+        <div class="boxes">
             <p>Estado Civil: </p>
-            <select name="" id="civil" class="textbox">
-                <option value="solt" active>Solteiro</option>
-                <option value="casa">Casado</option>
+            <select name="" id="civil" class="textbox" onchange="calcBruto()">
+                <option active>Escolha uma opção</option>
             </select>
         </div>
         <div class="boxes">
             <p>Dependentes: </p>
-            <select name="" id="depende" class="textbox">
-                <option value="0" active>0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 ou mais</option>
+            <select name="" id="depende" class="textbox" onchange="calcBruto(), calcRet()">
+                <option active>Escolha uma opção</option>
             </select>
         </div>
         <div class="boxes">
-            <p>Salario base: </p><input id="base" type="text" class="textbox" required>
-        </div>
-        <div class="boxes">
-            <p>Subsidio Almoço: </p><input id="almo" type="text" class="textbox" required>
-        </div>
-        <div class="boxes">
-            <p>Nº Dias: </p><input id="days" type="text" class="textbox" required>
-        </div>
-        <div class="boxes">
-            <p>Reteção: </p><input id="perc" type="text" class="textbox" required>
+            <p>Reteção: </p><input id="perc" type="text" class="textbox" required readonly>
         </div>
         <div class="boxes">
             <p>Insentação: </p><input id="inse" type="text" class="textbox" value="0">
