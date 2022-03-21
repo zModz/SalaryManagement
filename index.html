@@ -29,8 +29,17 @@
             </select>
         </div>
         <div class="boxes">
+            <p>Titulares: </p><input id="titu" type="text" class="textbox" onchange="calcBruto()" required>
+        </div>
+        <div class="boxes">
             <p>Dependentes: </p>
             <select name="" id="depende" class="textbox" onchange="calcBruto(), calcRet()">
+                <option active>Escolha uma opção</option>
+            </select>
+        </div>
+        <div class="boxes">
+            <p>Deficiente: </p>
+            <select name="" id="defici" class="textbox" onchange="calcBruto(), calcRet()">
                 <option active>Escolha uma opção</option>
             </select>
         </div>

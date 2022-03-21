@@ -2,6 +2,7 @@
 
 var calcForm = document.forms["calcutalor"];
 var civil = calcForm.elements["civil"];
+var defici = calcForm.elements["defici"];
 var depende = calcForm.elements["depende"];
 var base = calcForm.elements["base"];
 var almoco = calcForm.elements["almo"];
@@ -21,13 +22,22 @@ for(var i = 0; i < civilArr.length; i++) {
     civil.appendChild(el);
 }
 
+var defiArr = ["Sim", "Não"];
+for(var i = 0; i < defiArr.length; i++) {
+    var opt = defiArr[i];
+    var et = document.createElement("option");
+    et.textContent = opt;
+    et.value = opt;
+    defici.appendChild(et);
+}
+
 var dependeArr = [0, 1, 2, 3, 4, 5];
 for(var i = 0; i < dependeArr.length; i++) {
     var opt = dependeArr[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    depende.appendChild(el);
+    var en = document.createElement("option");
+    en.textContent = opt;
+    en.value = opt;
+    depende.appendChild(en);
 }
 
 function calcBruto(){
